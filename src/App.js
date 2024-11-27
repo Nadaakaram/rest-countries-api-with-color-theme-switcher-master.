@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header';
+import Searchbar from './components/Searchbar';
+import Card from './components/Card';
+import CardInside from './components/CardInside';
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+
 
 function App() {
+  const location = useLocation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+        {location.pathname === '/' && <Searchbar/>}
+      <Routes>
+        <Route path='/' element={<Card/>}/>
+        <Route path='/cardinside/:name' element={<CardInside/>}/>
+      </Routes>
     </div>
-  );
+
+  )
 }
 
-export default App;
+function Root(){
+  return (
+    <Router>
+      <App/>
+    </Router>
+  )
+}
+
+export default Root;
