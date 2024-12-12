@@ -1,20 +1,21 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon } from '@fortawesome/free-regular-svg-icons';
+import { useTheme } from './ThemeContext';
 
 
 const Header = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [theme, toggleTheme] = useTheme();
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  }
+
   return (
-    <div className='header'>
+    <div className={`header $ {theme}`}>
       <h2>Where in the world?</h2>
       <div className='dark-mood'>
         <FontAwesomeIcon icon={faMoon} />
-        <button className='theme-button' onClick={toggleDarkMode}>Dark Mode</button>
+        <button className='theme-button' onClick={toggleTheme}>Dark Mode
+          {theme === "light" ? "Switch to Dark Mode" : "Switch to Light Mode"}
+        </button>
       </div>
     </div>
   )

@@ -1,5 +1,10 @@
-body {
+body.light {
   background-color: hsl(0, 0%, 98%) !important;
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+}
+body.dark{
+  background-color: hsl(207, 26%, 17%) !important;
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
 }
@@ -127,9 +132,20 @@ body {
 @media screen and (max-width: 480px) {
   .header {
     width: 100%;
-    height: 100px;
-    padding: 10px 20px;
+    height: 80px;
+    padding: 8px 20px;
   }
+  .header h2 {
+    font-size: larger;
+  }
+  .theme-button {
+  border: none;
+  background-color: white;
+  cursor: pointer;
+  padding-left: 0;
+  color: black;
+  font-weight: 400;
+}
 .searchbar {
   display:block;
   padding: 20px;
@@ -142,11 +158,20 @@ body {
 .dropdown {
   padding: 30px 0px 0px ;
 }
+.card-container {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  justify-content: center;
+  margin: 0 !important;
+  position: relative;
+}
 .card {
-  margin: 20px;
-  width: 24rem !important;
+  margin: 0 0 20px 0;
+  width: 60vb !important;
   justify-content: space-between;
   height: 450px !important;
+  position: absolute;
 }
 .card-img-top {
   width: 100%;
@@ -158,6 +183,50 @@ body {
 }
 .card-text {
     padding-left: 10px;
+}
+.inside-card {
+  padding: 25px;
+  display: flex;
+  flex-direction: column ;
+  gap: 20px;
+}
+.left-sec {
+  display:flex;
+  padding: 0;
+  align-items: center;
+  text-align: center;
+}
+.button {
+  width: 150px;
+  align-self: start;
+}
+.flag-img {
+  width:80vw ;
+  height: 350px;
+  padding-top: 50px;
+}
+.right-sec {
+  display: grid;
+  flex-direction: row;
+  padding-top: 20px;
+  padding-left: 20px;
+  text-align:start ;
+  align-items: start !important;
+}
+.right-sec h1 {
+  font-size: 26px;
+  margin-bottom: 30px;
+  font-weight: bolder;
+}
+.grid {
+  display: grid !important;
+  grid-template-columns:none !important;  
+  gap: 10px;
+  /* grid-template-rows: repeat(5, 2fr); */
+}
+.right-sec p {
+  font-size: 14px;
+  line-height: 1;
 }
 }
 
@@ -186,4 +255,26 @@ body {
     padding: 5px;
     font-size: larger;
   }
+  .searchbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 20px 20px 25px;
+}
+.input-group {
+  width: 300px !important;
+  height: 50px;
+  flex-wrap: nowrap !important;
+  border-radius: 7px;
+  box-shadow: 2px 2px hsla(0, 0%, 52%, 0.215);
+}
+.dropdown {
+  padding-right: 0;
+}
+.card {
+  margin: 10px 10px 25px 10px;
+  width: 16rem !important;
+  justify-content: space-between;
+  height: 350px !important;
+}
 }

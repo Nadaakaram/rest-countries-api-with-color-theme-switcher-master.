@@ -1,4 +1,5 @@
 import './App.css';
+import {ThemeProvider} from './components/ThemeContext'
 import Header from './components/Header';
 import Searchbar from './components/Searchbar';
 import Card from './components/Card';
@@ -9,14 +10,14 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from "react-route
 function App() {
   const location = useLocation();
   return (
-    <div>
+    <>
       <Header />
         {location.pathname === '/' && <Searchbar/>}
       <Routes>
         <Route path='/' element={<Card/>}/>
-        <Route path='/cardinside/:name' element={<CardInside/>}/>
+        <Route path='/cardinside/:countryName' element={<CardInside/>}/>
       </Routes>
-    </div>
+    </>
 
   )
 }
@@ -24,7 +25,9 @@ function App() {
 function Root(){
   return (
     <Router>
+      <ThemeProvider>
       <App/>
+      </ThemeProvider>
     </Router>
   )
 }
