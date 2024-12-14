@@ -8,6 +8,13 @@ body.dark{
   margin: 0;
   font-family: "Nunito Sans", sans-serif;
 }
+.dark .header,.dark .theme-button,.dark .moon-icon,.dark .card,.dark .searchinput,.dark .input-group-text,.dark .dropdown , .dark .dropdown-menu , .dark .dropdown-item , .dark .dropdown-toggle,.dark .button,.dark .left-sec button{
+  background-color: hsl(209, 23%, 22%)!important;
+  color: white !important;
+} 
+.dark .inside-card{
+  color: white;
+}
 .header {
   display: flex;
   justify-content: space-between;
@@ -15,6 +22,7 @@ body.dark{
   background-color: white !important;
   padding: 15px 100px;
 }
+
 .header h2 {
   font-weight: 700;
 }
@@ -25,9 +33,10 @@ body.dark{
   font-weight: 300;
   cursor: pointer;
   padding-left: 10px;
-      color: black;
+    color: black;
     font-weight: 400;
 }
+
 .card-container {
   display: flex !important;
   flex-wrap: wrap !important;
@@ -39,17 +48,37 @@ body.dark{
   margin: 25px;
   width: 17rem !important;
   justify-content: space-between;
-  height: 400px !important;
+  height: 370px !important;
 }
+
 .card-img-top {
   width: 100%;
   height: 200px;
-  /* object-fit: cover; */
 }
+.dark .card-title{
+  color: white;
+}
+.card-title {
+  font-weight: 800;
+  cursor: pointer;
+  padding-bottom: 8px;
+
+}
+.card-body {
+  padding: 30px !important;
+}
+
 .title {
   font-weight: 600;
-  cursor: pointer;
 }
+.card-text{
+  line-height: 0.4;
+  color: hsl(200, 15%, 8%);
+}
+.dark .card-text{
+  color: white;
+}
+
 .searchbar {
   display: flex;
   justify-content: space-between;
@@ -62,6 +91,7 @@ body.dark{
   height: 50px;
   color: black;
 }
+
 .input-group {
   width: 450px !important;
   height: 50px;
@@ -73,12 +103,22 @@ body.dark{
   background: white !important ;
   border: none !important;
 }
+
 .search-icon {
   color: hsl(0, 0%, 52%);
 }
-.dropdown {
-  padding-right: 10px;
+.dark .search-icon{
+  color: white;
 }
+.dropdown {
+  margin-right: 10px;
+  border-radius: 7px;
+  /* padding-right: 10px; */
+}
+.dropdown ::after{
+  border: none;
+}
+
 .inside-card {
   padding: 100px;
   display: flex;

@@ -43,9 +43,9 @@ const CardInside = () => {
   return (
     <div className="inside-card">
       <div className="left-sec">
-        <div className="button">
+        <div onClick={() => navigate(-1)} className="button">
           <FontAwesomeIcon icon={faArrowLeft} />
-          <button onClick={() => navigate(-1)}>Back</button>
+          <button >Back</button>
         </div>
         <img className="flag-img" src={country.flags.png} alt={country.name.common} />
       </div>

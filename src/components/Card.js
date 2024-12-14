@@ -44,7 +44,7 @@ const Card = () => {
 
             <p className="card-text" key={country.population}><span className='title'>Population: </span>{country.population.toLocaleString()}</p>
             <p className="card-text" key={country.region}><span className='title'>Region: </span>{country.region}</p>
-              <p className="card-text"><span className='title'>Capital: </span>{country.capital ? country.capital[0] : 'N/A'}</p>
+            <p className="card-text"><span className='title'>Capital: </span>{country.capital ? country.capital[0] : 'N/A'}</p>
   
           </div>
         </div>
